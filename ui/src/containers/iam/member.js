@@ -96,12 +96,11 @@ const Member = ({
       <Card
         title={`${member.user.firstName} ${member.user.lastName}`}
         subtitle={member.user.email}
-        size="medium"
         actions={[
           {
             title: 'Remove',
             onClick: () => setShowRemovePopup(true),
-            variant: 'secondary',
+            variant: 'danger',
           },
         ]}
       >
@@ -134,7 +133,12 @@ const Member = ({
             </strong>
             ) from the project.
           </Text>
-          <Button marginTop={5} title="Remove" onClick={removeMember} />
+          <Button
+            marginTop={5}
+            title="Remove"
+            onClick={removeMember}
+            variant="danger"
+          />
         </Card>
       </Popup>
     </>

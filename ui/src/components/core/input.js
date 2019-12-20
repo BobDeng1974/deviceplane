@@ -8,7 +8,14 @@ import {
   shadow,
 } from 'styled-system';
 
-const Input = styled.input`
+const Input = styled.input.attrs(props => ({
+  // we can define static props
+
+  // or we can define dynamic ones
+  spellCheck: props.spellCheck || 'off',
+  autoCorrect: props.autoCorrect || 'off',
+  autoComplete: props.autoComplete || 'off',
+}))`
   border: 1px solid ${props => props.theme.colors.grays[0]};
   outline: none;
   margin: 0;

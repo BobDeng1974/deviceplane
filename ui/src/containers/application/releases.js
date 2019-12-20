@@ -54,7 +54,7 @@ const Releases = ({
   return (
     <Card
       title="Releases"
-      size="xlarge"
+      size="full"
       actions={[
         {
           title: 'Create Release',

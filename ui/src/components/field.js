@@ -78,6 +78,7 @@ const Field = forwardRef(
             register={register}
             setValue={setValue}
             onChangeEvent={data => ({ value: data[0] })}
+            {...props}
           />
         );
       }

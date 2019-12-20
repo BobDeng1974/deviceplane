@@ -123,15 +123,13 @@ const EditableLabelTable = ({ data, onAdd, onRemove }) => {
             <Row>
               <Button
                 title={
-                  <Icon icon="edit" size={18} color={theme.colors.primary} />
+                  <Icon icon="edit" size={18} color={theme.colors.white} />
                 }
                 variant="icon"
                 onClick={() => setEdit(index)}
               />
               <Button
-                title={
-                  <Icon icon="trash" size={18} color={theme.colors.white} />
-                }
+                title={<Icon icon="trash" size={18} color={theme.colors.red} />}
                 variant="icon"
                 marginLeft={4}
                 onClick={() => setLabelToRemove(original)}
@@ -245,7 +243,12 @@ const EditableLabelTable = ({ data, onAdd, onRemove }) => {
             You are about to remove the{' '}
             <strong>{labelToRemove && labelToRemove.key}</strong> label.
           </Text>
-          <Button marginTop={5} title="Remove" onClick={removeLabel} />
+          <Button
+            marginTop={5}
+            title="Remove"
+            onClick={removeLabel}
+            variant="danger"
+          />
         </Card>
       </Popup>
     </>

@@ -5,7 +5,9 @@ import { Icon } from 'evergreen-ui';
 
 import { Column, Row, Text } from './core';
 
-const Container = styled(Column)``;
+const Container = styled(Column)`
+  flex: 1;
+`;
 
 Container.defaultProps = { borderRadius: 1, borderColor: 'white' };
 

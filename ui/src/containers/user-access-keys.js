@@ -58,7 +58,7 @@ const UserAccessKeys = () => {
             </>
           ) : (
             <Button
-              title={<Icon icon="trash" size={18} color={theme.colors.white} />}
+              title={<Icon icon="trash" size={18} color={theme.colors.red} />}
               variant="icon"
               onClick={() => setKeyToDelete(row.original.id)}
             />

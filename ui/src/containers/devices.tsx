@@ -18,6 +18,7 @@ import {
   LabelValueCondition,
 } from '../components/DevicesFilter';
 import { DevicesFilterButtons } from '../components/DevicesFilterButtons';
+import DeviceStatus from '../components/device-status';
 import { buildLabelColorMap, renderLabels } from '../helpers/labels';
 
 // Runtime type safety
@@ -81,12 +82,7 @@ const Devices = ({ route }) => {
     () => [
       {
         Header: 'Status',
-        Cell: ({ row }) =>
-          row.original.status === 'offline' ? (
-            <Badge bg="red">offline</Badge>
-          ) : (
-            <Badge bg="green">online</Badge>
-          ),
+        Cell: ({ row }) => <DeviceStatus status={row.original.status} />,
         sortType: 'basic',
         style: {
           flex: '0 0 100px',

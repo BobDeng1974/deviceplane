@@ -23,6 +23,11 @@ const links = [
     to: '/applications',
   },
   {
+    title: 'Monitoring',
+    icon: 'pulse',
+    to: '/monitoring',
+  },
+  {
     title: 'IAM',
     icon: 'people',
     to: '/iam',
