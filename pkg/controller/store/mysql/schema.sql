@@ -204,6 +204,7 @@ create table if not exists service_accounts (
   description longtext not null,
 
   primary key (id),
+  unique name_project_id_unique (name, project_id),
   foreign key service_accounts_project_id(project_id)
   references projects(id)
   on delete cascade,
