@@ -231,7 +231,7 @@ func NewService(
 	apiRouter.HandleFunc("/projects/{project}/devices/{device}/labels", s.validateAuthorization("devicelabels", "SetDeviceLabel", s.withDevice(s.setDeviceLabel))).Methods("PUT")
 	apiRouter.HandleFunc("/projects/{project}/devices/{device}/labels/{key}", s.validateAuthorization("devicelabels", "DeleteDeviceLabel", s.withDevice(s.deleteDeviceLabel))).Methods("DELETE")
 
-	apiRouter.HandleFunc("/projects/{project}/labels", s.validateAuthorization("devicelabels", "ListAllDeviceLabelKeys", s.listAllDeviceLabelKeys)).Methods("GET")
+	apiRouter.HandleFunc("/projects/{project}/devicelabels", s.validateAuthorization("devicelabels", "ListAllDeviceLabelKeys", s.listAllDeviceLabelKeys)).Methods("GET")
 
 	apiRouter.HandleFunc("/projects/{project}/deviceregistrationtokens", s.validateAuthorization("deviceregistrationtokens", "ListDeviceRegistrationTokens", s.listDeviceRegistrationTokens)).Methods("GET")
 	apiRouter.HandleFunc("/projects/{project}/deviceregistrationtokens", s.validateAuthorization("deviceregistrationtokens", "CreateDeviceRegistrationToken", s.createDeviceRegistrationToken)).Methods("POST")

@@ -60,10 +60,10 @@ var (
 		"GetMetrics",
 		"GetServiceMetrics",
 		"GetDeviceLabel",
+		"ListAllDeviceLabelKeys",
 		"GetDeviceRegistrationToken",
 		"ListDeviceRegistrationTokens",
 		"GetProjectConfig",
-		"ListAllDeviceLabelKeys",
 	}
 	writeActions = append(readActions, []string{
 		"CreateApplication",
